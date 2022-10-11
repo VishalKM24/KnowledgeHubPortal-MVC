@@ -1,0 +1,51 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<KnowledgeHubPortal.Models.Entity.Catagory>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories List</h2>
+<h3>@TempData["Message"]</h3>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form action="Index" method="get">
+    Enter Category Name/Description<br/>
+    <input type="text" name="name" />
+    <input type="submit" name="btnSubmit" value="search" />
+</form>
+<table class="table">
+    <tr>
+        <th>Category Id</th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CatagoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CatagoryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CatagoryId })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new {page}))

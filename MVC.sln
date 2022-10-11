@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET MVC", "ASP.NET MVC", "{3C1FEB6C-E22D-4C6C-AEC2-0665B3B4C326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal", "KnowledgeHubPortal\KnowledgeHubPortal.csproj", "{293ADF98-1355-406B-8366-2F48D3B26355}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{293ADF98-1355-406B-8366-2F48D3B26355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293ADF98-1355-406B-8366-2F48D3B26355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293ADF98-1355-406B-8366-2F48D3B26355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293ADF98-1355-406B-8366-2F48D3B26355}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{293ADF98-1355-406B-8366-2F48D3B26355} = {3C1FEB6C-E22D-4C6C-AEC2-0665B3B4C326}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C71918D-9374-478B-BDB0-C2AB0652F556}
+	EndGlobalSection
+EndGlobal
