@@ -10,6 +10,8 @@ namespace KnowledgeHubPortal.Models.Data
     public interface ICatagoriesRepository
     {
         void Create(Catagory catagory);
+        Task CreateAsync(Catagory catagory);
+
         void Update(Catagory catagory);
         Catagory GetCatagory(int id);
         List<Catagory> GetCatagories();

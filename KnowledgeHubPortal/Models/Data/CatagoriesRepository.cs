@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace KnowledgeHubPortal.Models.Data
@@ -13,6 +14,12 @@ namespace KnowledgeHubPortal.Models.Data
         {
             db.Catagories.Add(catagory);
             db.SaveChanges();
+        }
+
+        public async Task CreateAsync(Catagory catagory)
+        {
+            db.Catagories.Add(catagory);
+            await db.SaveChangesAsync();
         }
 
         public void Delete(int id)

@@ -10,16 +10,23 @@ namespace KnowledgeHubPortal.Controllers
 {
     public class ArticlesController : Controller
     {
-        private IArticleRepository repo = new ArticleRepository();
-        private ICatagoriesRepository catagoryRepo = new CatagoriesRepository();
+        private IArticleRepository repo = null; // new ArticleRepository();
+        private ICatagoriesRepository catagoryRepo = null; // new CatagoriesRepository();
+
+        public ArticlesController(IArticleRepository repo, ICatagoriesRepository catagoryRepo)
+        {
+            this.repo = repo;
+            this.catagoryRepo = catagoryRepo;
+        }
 
         // GET: Articles
         // [Authorize]
+        [OutputCache(Duration = 20, VaryByParam = "data", Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult Index(string data = null)
         {
             // Fetch articles for browse
             List<Article> articles = new List<Article>();
-
+            ViewBag.ToDay = DateTime.Now.ToLongTimeString();
             if (data == null)
                 articles = repo.GetArticlesForBrowse();
             else

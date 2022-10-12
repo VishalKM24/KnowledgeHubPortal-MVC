@@ -159,3 +159,10 @@ C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\vi\Huma
 C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\zh-CN\Humanizer.resources.dll
 C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\zh-Hans\Humanizer.resources.dll
 C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\zh-Hant\Humanizer.resources.dll
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\Unity.Abstractions.dll
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\Unity.Container.dll
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\Unity.Mvc5.dll
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\Unity.Abstractions.pdb
+C:\Users\Admin\Desktop\Framework-Projects\MVC\MVC\KnowledgeHubPortal\bin\Unity.Container.pdb

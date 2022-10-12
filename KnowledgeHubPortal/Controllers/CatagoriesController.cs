@@ -8,16 +8,23 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Windows;
 using PagedList;
+using System.Threading.Tasks;
 
 namespace KnowledgeHubPortal.Controllers
 {
-    [Authorize(Roles = "admin")]
+    // [Authorize(Roles = "admin")]
     public class CatagoriesController : Controller
     {
         // GET: Catagories
         //.../Catagories/index
         private KnowledgeHubDbContext db = new KnowledgeHubDbContext();
-        private ICatagoriesRepository repo = new CatagoriesRepository();
+        private ICatagoriesRepository repo = null; // new CatagoriesRepository();
+
+        public CatagoriesController(ICatagoriesRepository repo)
+        {
+            this.repo = repo;
+        }
+
 
         [AllowAnonymous]
         public ActionResult Index(string Name, int? page)
@@ -57,6 +64,21 @@ namespace KnowledgeHubPortal.Controllers
 
             db.Catagories.Add(catagory);
             db.SaveChanges();
+            TempData["Message"] = $"Catagory {catagory.Name} successfully Created";
+            return RedirectToAction("Index");
+        }
+
+        // Async Method
+        public async Task<ActionResult> SaveAsync(Catagory catagory)
+        {
+            // Validate
+            if (!ModelState.IsValid)
+                return View("Create");
+
+            //db.Catagories.Add(catagory);
+            //db.SaveChanges();
+
+            await repo.CreateAsync(catagory);
             TempData["Message"] = $"Catagory {catagory.Name} successfully Created";
             return RedirectToAction("Index");
         }

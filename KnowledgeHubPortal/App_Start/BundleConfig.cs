@@ -8,6 +8,20 @@ namespace KnowledgeHubPortal
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // Create our own Bundles
+
+            bundles.Add(new ScriptBundle("~/myscriptbundle")
+                .Include("~/Scripts/bootstrap.js")
+                .Include("~/Scripts/jquery-3.4.1.js")
+                .Include("~/Scripts/jquery.validate.js")
+                );
+
+            bundles.Add(new StyleBundle("~/mystylebundle")
+                .Include("~/Content/bootstrap.min.css")
+                .Include("~/Content/Site.css")
+                );
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -25,6 +39,8 @@ namespace KnowledgeHubPortal
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
